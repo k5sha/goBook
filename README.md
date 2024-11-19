@@ -24,6 +24,30 @@ This guide provides a step-by-step approach to installing and configuring the AP
   <img src="https://github.com/k5sha/goBook/blob/master/media/how.jpg" alt="How work" width="726"/>
 </p>
 
+### Configuration
+The application uses a configuration file, **config.yaml**, to define environment-specific settings, such as the server port and database connection details.
+
+Here is an example of the config.local.yaml file:
+```yaml
+port: ':3000'
+database_dsn: 'postgres://postgres:password@localhost:5432/books_db?sslmode=disable'
+```
+#### Explanation:
+- `port: ':3000'`
+This sets the port on which the API server will run. By default, the server will listen on port 3000.
+
+- `database_dsn: 'postgres://postgres:password@localhost:5432/books_db?sslmode=disable'`
+  
+This is the Data Source Name (DSN) for connecting to the PostgreSQL database. It contains the necessary credentials and database information:
+
+- `postgres`: The username for the database.
+- `password`: The password for the database.
+- `localhost`: The hostname of the database server (in this case, it’s running locally).
+- `5432`: The port on which the PostgreSQL database is listening (default is 5432).
+- `books_db`: The name of the database to connect to.
+- `sslmode=disable`: This disables SSL encryption for the connection, which is commonly used in local development environments.
+  
+By editing this file, you can easily change the server's port or adjust the database connection settings without modifying the source code.
 
 Author:
 Yurii (k5sha) Yevtushenko
