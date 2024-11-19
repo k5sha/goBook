@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/k5sha/goBook/blob/master/media/logo.png2" alt="Logo" width="256"/>
+  <img src="https://github.com/k5sha/goBook/blob/master/media/logo.png" alt="Logo" width="256"/>
 </p>
 
 <div align="center">
