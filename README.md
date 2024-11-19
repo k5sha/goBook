@@ -18,5 +18,8 @@ The project also integrates PostgreSQL for data storage and uses the Aconfig pac
 This guide provides a step-by-step approach to installing and configuring the API via Docker.
 
 ### How it works:
+<p align="center">
+  <img src="https://github.com/k5sha/goBook/blob/master/media/how.jpg" alt="How work" width="726"/>
+</p>
 Author:
 Yurii (k5sha) Yevtushenko

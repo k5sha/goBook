@@ -1,7 +1,6 @@
 package config
 
 import (
-	"github.com/cristalhq/aconfig"
 	"github.com/cristalhq/aconfig/aconfigyaml"
 	"log"
 	"sync"
