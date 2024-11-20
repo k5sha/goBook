@@ -24,10 +24,23 @@ This guide provides a step-by-step approach to installing and configuring the AP
   <img src="https://github.com/k5sha/goBook/blob/master/media/how.jpg" alt="How work" width="726"/>
 </p>
 
+### Startup
+- via Docker
+```bash
+docker compose -f docker-compose.dev.yml up -d
+```
+- via bash 
+```bash
+go mod download
+go run cmd/main.go
+```
+
 ### Configuration
 The application uses a configuration file, **config.yaml**, to define environment-specific settings, such as the server port and database connection details.
 
 Here is an example of the config.local.yaml file:
+> [!NOTE]
+> If you are using docker to run the database on localhost, you should use `db` instead of `localhost` in the `database_dsn` clause of the config.yaml file
 ```yaml
 port: ':3000'
 database_dsn: 'postgres://postgres:password@localhost:5432/books_db?sslmode=disable'
@@ -49,5 +62,12 @@ This is the Data Source Name (DSN) for connecting to the PostgreSQL database. It
   
 By editing this file, you can easily change the server's port or adjust the database connection settings without modifying the source code.
 
-Author:
-Yurii (k5sha) Yevtushenko
+### Nice to have features (backlog)
+- [ ]  Add swagger
+- [ ]  Add a separate author model to the database
+- [ ]  Add tests
+- [ ]  Add comments
+- [ ]  Add to config the 'release' mode
+
+### Author:
+**Yurii (k5sha) Yevtushenko**
